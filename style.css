@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes duck-fly-1 {
+  0% {
+    top: 74vh;
+  }
+  50% {
+    left: 2vw;
+    top: 19vh;
+  }
+  100% {
+    left: 100vw;
+    top: 49vh;
+  }
+}
+@keyframes duck-fly-2 {
+  0% {
+    top: 64vh;
+  }
+  50% {
+    left: 18vw;
+    top: 15vh;
+  }
+  100% {
+    left: 100vw;
+    top: 42vh;
+  }
+}
+@keyframes duck-fly-3 {
+  0% {
+    top: 1vh;
+  }
+  50% {
+    left: 38vw;
+    top: 39vh;
+  }
+  100% {
+    left: 100vw;
+    top: 11vh;
+  }
+}
+@keyframes duck-fly-4 {
+  0% {
+    top: 60vh;
+  }
+  50% {
+    left: 50vw;
+    top: 33vh;
+  }
+  100% {
+    left: 100vw;
+    top: 22vh;
+  }
+}
+.game {
+  counter-reset: count;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/back.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.duck-check {
+  position: absolute;
+  visibility: hidden;
+  left: -999999px;
+}
+.duck-check:checked {
+  counter-increment: count;
+}
+.duck-check:checked ~ label {
+  display: none;
+}
+
+.counter-info {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: red;
+  font-size: 64px;
+}
+.counter-info::before {
+  content: counter(count);
+}
+
+.duck {
+  position: absolute;
+  left: -75px;
+}
+.duck__img {
+  width: 75px;
+}
+.duck_1 {
+  animation: duck-fly-1 5s ease-in-out 2s both;
+}
+.duck_2 {
+  animation: duck-fly-2 5s ease-in-out 4s both;
+}
+.duck_3 {
+  animation: duck-fly-3 5s ease-in-out 6s both;
+}
+.duck_4 {
+  animation: duck-fly-4 5s ease-in-out 8s both;
+}/*# sourceMappingURL=style.css.map */
